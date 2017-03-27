@@ -1,8 +1,8 @@
 Metadata-Version: 1.0
 Name: protest
-Version: 0.0.4
+Version: 0.0.7
 Summary: automatic generation of protesting material
-Home-page: http://github.com/montoyamoraga/protestpy
+Home-page: https://github.com/montoyamoraga/protestpy
 Author: aaron montoya-moraga
 Author-email: UNKNOWN
 License: MIT
