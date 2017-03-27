@@ -13,4 +13,4 @@ install with pip:
 special thanks
 --------------
 
-allison parrish, andrew lazarow, justin peake, lauren mccarthy, sam lavigne, tigran paravyan, wipawe sirikolkarn, yuli cai
+allison parrish, andrew lazarow, justin peake, lauren mccarthy, sam lavigne, tigran paravyan, wipawe sirikolkarn, yuan gao, yuli cai
