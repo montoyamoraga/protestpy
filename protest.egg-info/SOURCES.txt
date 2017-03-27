@@ -1,0 +1,7 @@
+setup.py
+protest/__init__.py
+protest.egg-info/PKG-INFO
+protest.egg-info/SOURCES.txt
+protest.egg-info/dependency_links.txt
+protest.egg-info/requires.txt
+protest.egg-info/top_level.txt
