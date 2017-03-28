@@ -9,8 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-def scrape_google_images(subject):
-
+def images(subject):
 
     #print message
     print "open new google chrome window"
@@ -73,7 +72,9 @@ def scrape_google_images(subject):
         driver.execute_script("window.scrollTo(0, 0);")
         time.sleep(0.1)
 
-
+    #scroll down
+    driver.execute_script(
+        "window.scrollTo(0, document.body.scrollHeight);")
 
     #print message
     print "create folders for storing pics"
