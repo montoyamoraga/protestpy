@@ -43,6 +43,39 @@ def scrape_google_images(subject):
     time.sleep(2)
 
     #print message
+    print "scrolling up and down to load a lot of pics"
+
+    #scroll up and down to make more images appear
+    for i in range(10):
+        driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(0.1)
+        driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(0.1)
+
+    #print message
+    print "click on the show more results button"
+
+    #retrieve buttons
+    buttons = driver.find_elements_by_id("smb")
+
+    #print buttons
+    print buttons
+
+    #click on the button
+    buttons[0].click()
+
+    #scroll up and down to make more images appear
+    for i in range(10):
+        driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);")
+        time.sleep(0.1)
+        driver.execute_script("window.scrollTo(0, 0);")
+        time.sleep(0.1)
+
+
+
+    #print message
     print "create folders for storing pics"
 
     #create folder for storing pics
@@ -53,10 +86,10 @@ def scrape_google_images(subject):
     #print message
     print "find all of the images"
 
-    # find images
+    #find images
     images = driver.find_elements_by_tag_name("img")
 
-    # reset counter
+    #reset counter
     counter = 0
 
     #print message
