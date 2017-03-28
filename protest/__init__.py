@@ -110,7 +110,7 @@ def images(subject):
 
 
     #list of protest words
-    protestWords = ["oh no", "is disgusting", "sucks", "is bad", "could be better"]
+    protestWords = ["oh no", "is disgusting", "sucks", "is bad", "could be better", "needs improvement", "stop this", "this is very bad", "disapproval", "ugh", "i'm pissed about this", "i'm sick of this", "i don't like this", "this is unfair", "nope"]
 
     #define extensions
     prePath = "./pics_" + subject + "/"
