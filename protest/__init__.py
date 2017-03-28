@@ -137,12 +137,14 @@ def images(subject):
         # open the image
         img = Image.open(path + pngExtension)
         img = img.convert('RGB')
+        #retrieve dimensions of pic
+        picWidth, picHeight = img.size
         # canvas element is an instace of ImageDraw
         canvas = ImageDraw.Draw(img)
         #fnt element is an instance of ImageFont
         text = protestWords[random.randint(1, len(protestWords) - 1)]
         #canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(0, 0, 0), font=fnt)
-        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, font=fnt, fill=(255,0,0,255))
+        canvas.text((random.randint(0, picWidth), random.randint(0, picHeight)), text, font=fnt, fill=(255,0,0,255))
         img.save(path + pngExtension)
 
     #print message
