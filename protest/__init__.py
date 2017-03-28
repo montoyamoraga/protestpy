@@ -104,9 +104,10 @@ def images(subject):
         try:
             # save the images to the pics folder, as counter.png
             urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
+            counter = counter + 1
         except:
             print "this image couldn't be downloaded"
-        counter = counter + 1
+
 
     #list of protest words
     protestWords = ["oh no", "is disgusting", "sucks"]
@@ -140,7 +141,7 @@ def images(subject):
         #fnt element is an instance of ImageFont
         text = protestWords[random.randint(1, len(protestWords) - 1)]
         #canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(0, 0, 0), font=fnt)
-        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, font=fnt)
+        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, font=fnt, fill=(255,0,0,255))
         img.save(path + pngExtension)
 
     #print message
