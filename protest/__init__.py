@@ -116,7 +116,8 @@ def images(subject):
     pngExtension = ".png"
 
     #pick font
-    fnt = ImageFont.truetype('./Comic_Sans_MS.ttf', 30)
+    #fnt = ImageFont.truetype('Comic_Sans_MS.ttf', 30)
+    fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
 
     print "put protest stuff on top"
     # iterate through every pic in the folder
