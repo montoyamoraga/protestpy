@@ -1,7 +1,7 @@
 README.rst
 setup.py
-protest/Comic Sans MS.ttf
 protest/__init__.py
+protest/comic_sans.ttf
 protest.egg-info/PKG-INFO
 protest.egg-info/SOURCES.txt
 protest.egg-info/dependency_links.txt

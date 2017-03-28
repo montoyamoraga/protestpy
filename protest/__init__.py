@@ -115,10 +115,17 @@ def images(subject):
     prePath = "./pics_" + subject + "/"
     pngExtension = ".png"
 
+
+    print (os.getcwd() + "\n")
+
+
     #pick font
     #fnt = ImageFont.truetype('Comic_Sans_MS.ttf', 30)
+    fnt = ImageFont.truetype('./comic_sans.ttf', 30)
     #fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
-    fnt = ImageFont.truetype("arial.ttf", 15)
+    #fnt = ImageFont.truetype("arial.ttf", 15)
+
+
 
     print "put protest stuff on top"
     # iterate through every pic in the folder
