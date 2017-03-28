@@ -10,7 +10,7 @@ from setuptools import *
 
 setup(
     name='protest',
-    version='0.2.7',
+    version='0.2.8',
     url='https://github.com/montoyamoraga/protestpy',
     author='aaron montoya-moraga',
     description='automatic generation of protesting material',
