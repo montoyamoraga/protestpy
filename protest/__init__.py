@@ -121,7 +121,7 @@ def images(subject):
 
     #pick font
     #fnt = ImageFont.truetype('Comic_Sans_MS.ttf', 30)
-    fnt = ImageFont.truetype('comic_sans.ttf', 30)
+    fnt = ImageFont.truetype('./Comic_Sans_MS.ttf.ttf', 30)
     #fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
     #fnt = ImageFont.truetype("arial.ttf", 15)
 
