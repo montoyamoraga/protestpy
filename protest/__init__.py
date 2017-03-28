@@ -126,7 +126,7 @@ def images(subject):
         canvas = ImageDraw.Draw(img)
         for i in range(times):
             # fnt element is an instance of ImageFont
-            text = sonnets[random.randint(1, len(sonnets) - 1)]
+            text = protestWords[random.randint(1, len(protestWords) - 1)]
             canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(
                 random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), font=fnt)
         img.save(path + pngExtension)
