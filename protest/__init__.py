@@ -139,7 +139,8 @@ def images(subject):
         canvas = ImageDraw.Draw(img)
         #fnt element is an instance of ImageFont
         text = protestWords[random.randint(1, len(protestWords) - 1)]
-        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(0, 0, 0), font=fnt)
+        #canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(0, 0, 0), font=fnt)
+        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, font=fnt)
         img.save(path + pngExtension)
 
     #print message
