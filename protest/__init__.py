@@ -136,6 +136,7 @@ def images(subject):
         print path
         # open the image
         img = Image.open(path + pngExtension)
+        img = img.convert('RGB')
         # canvas element is an instace of ImageDraw
         canvas = ImageDraw.Draw(img)
         #fnt element is an instance of ImageFont
