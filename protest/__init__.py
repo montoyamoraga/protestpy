@@ -8,6 +8,7 @@ import urllib
 from PIL import Image, ImageDraw, ImageFont
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+import youtube_dl
 
 def images(subject):
 
@@ -109,3 +110,107 @@ def images(subject):
 
     #close the browser
     driver.quit()
+
+def videos(subject):
+
+    #print message
+    print "open new google chrome window"
+
+    # new driver using google chrome
+    driver = webdriver.Chrome()
+
+    # set the window size of the driver
+    driver.set_window_size(1200, 800)
+
+    # wait for 5 seconds
+    time.sleep(2)
+
+    # url to be scraped
+    base_url = "https://www.youtube.com/results?search_query="
+
+    #retrieve the argument from the function
+    handle = subject
+
+    #reconstruct the complete url
+    complete_url = base_url + handle
+
+    #print message
+    print "go to youtube and search for videos"
+
+    # go to the url
+    driver.get(complete_url)
+
+    # wait for 2 seconds
+    time.sleep(2)
+
+    #print message
+    print "retrieve videos"
+
+    #retrieve videos
+    videos = driver.find_elements_by_css_selector('h3 > a')
+
+    #print message
+    print "create folder for storing videos"
+
+    #create folder for storing pics
+    videosFolder = "videos_" + subject
+    system("mkdir " + videosFolder)
+    system("cd " + videosFolder)
+
+    counter = 0
+
+    #download videos
+    for video in videos:
+        address = video.get_attribute("href")
+        print address
+        if len(address) < 45:
+            youtube_dl.YoutubeDL({'format': 'mp4'}).download([address])
+
+    # #click on the button
+    # buttons[0].click()
+    #
+    # #scroll up and down to make more images appear
+    # for i in range(10):
+    #     driver.execute_script(
+    #         "window.scrollTo(0, document.body.scrollHeight);")
+    #     time.sleep(0.1)
+    #     driver.execute_script("window.scrollTo(0, 0);")
+    #     time.sleep(0.1)
+    #
+    # #scroll down
+    # driver.execute_script(
+    #     "window.scrollTo(0, document.body.scrollHeight);")
+    #
+    # #print message
+    # print "create folders for storing pics"
+    #
+    # #create folder for storing pics
+    # picsFolder = "pics_" + subject
+    # system("mkdir " + picsFolder)
+    # system("cd " + picsFolder)
+    #
+    # #print message
+    # print "find all of the images"
+    #
+    # #find images
+    # images = driver.find_elements_by_tag_name("img")
+    #
+    # #reset counter
+    # counter = 0
+    #
+    # #print message
+    # print "download every image"
+    #
+    # # iterate through all of the images
+    # for image in images:
+    #     imageSrc = image.get_attribute('currentSrc')
+    #     print imageSrc
+    #     # save the images to the pics folder, as counter.png
+    #     urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
+    #     counter = counter + 1
+    #
+    # #print message
+    # print "close browser"
+    #
+    # #close the browser
+    # driver.quit()

@@ -10,11 +10,11 @@ from setuptools import *
 
 setup(
     name='protest',
-    version='0.1.5',
+    version='0.1.8',
     url='https://github.com/montoyamoraga/protestpy',
     author='aaron montoya-moraga',
     description='automatic generation of protesting material',
     license='MIT',
     packages= find_packages(exclude=['contrib', 'docs', 'tests*']),
-    install_requires=['Pillow', 'videogrep', 'selenium']
+    install_requires=['Pillow', 'videogrep', 'selenium', 'youtube_dl']
 )
