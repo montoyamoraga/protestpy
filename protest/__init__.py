@@ -137,13 +137,10 @@ def images(subject):
         img = Image.open(path + pngExtension)
         # canvas element is an instace of ImageDraw
         canvas = ImageDraw.Draw(img)
-        for i in range(5):
-            # fnt element is an instance of ImageFont
-            text = protestWords[random.randint(1, len(protestWords) - 1)]
-            canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(
-                random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), font=fnt)
+        #fnt element is an instance of ImageFont
+        text = protestWords[random.randint(1, len(protestWords) - 1)]
+        canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(0, 0, 0), font=fnt)
         img.save(path + pngExtension)
-
 
     #print message
     print "close browser"
