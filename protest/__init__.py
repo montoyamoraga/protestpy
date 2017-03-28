@@ -4,6 +4,7 @@ import sys
 import time
 import string
 import random
+import urllib
 from PIL import Image, ImageDraw, ImageFont
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -41,15 +42,25 @@ def scrape_google_images(subject):
     # wait for 2 seconds
     time.sleep(2)
 
+    #print message
+    print "create folders for storing pics"
+
     #create folder for storing pics
-    system("mkdir pics_" + subject)
-    system("cd pics_" + subject)
+    picsFolder = "pics_" + subject
+    system("mkdir " + picsFolder)
+    system("cd " + picsFolder)
+
+    #print message
+    print "find all of the images"
 
     # find images
     images = driver.find_elements_by_tag_name("img")
 
     # reset counter
     counter = 0
+
+    #print message
+    print "download every image"
 
     # iterate through all of the images
     for image in images:
@@ -58,6 +69,9 @@ def scrape_google_images(subject):
         # save the images to the pics folder, as counter.png
         urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
         counter = counter + 1
+
+    #print message
+    print "close browser"
 
     #close the browser
     driver.quit()
