@@ -25,7 +25,7 @@ def images(subject):
     time.sleep(2)
 
     # url to be scraped
-    base_url = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1044&bih=584&q=pinera&oq="
+    base_url = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1044&bih=584&q="
 
     #retrieve the argument from the function
     handle = subject
@@ -110,7 +110,7 @@ def images(subject):
 
 
     #list of protest words
-    protestWords = ["oh no", "is disgusting", "sucks"]
+    protestWords = ["oh no", "is disgusting", "sucks", "is bad", "could be better"]
 
     #define extensions
     prePath = "./pics_" + subject + "/"
