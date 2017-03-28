@@ -101,8 +101,11 @@ def images(subject):
     for image in images:
         imageSrc = image.get_attribute('currentSrc')
         print imageSrc
-        # save the images to the pics folder, as counter.png
-        urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
+        try:
+            # save the images to the pics folder, as counter.png
+            urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
+        except:
+            print "this image couldn't be downloaded"
         counter = counter + 1
 
     #list of protest words
