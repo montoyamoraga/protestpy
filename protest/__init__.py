@@ -111,6 +111,7 @@ def images(subject):
     #list of protest words
     protestWords = ["oh no", "is disgusting", "sucks"]
 
+    #define extensions
     prePath = "./pics_" + subject + "/"
     pngExtension = ".png"
 
@@ -127,7 +128,7 @@ def images(subject):
         img = Image.open(path + pngExtension)
         # canvas element is an instace of ImageDraw
         canvas = ImageDraw.Draw(img)
-        for i in range(times):
+        for i in range(5):
             # fnt element is an instance of ImageFont
             text = protestWords[random.randint(1, len(protestWords) - 1)]
             canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(
@@ -195,3 +196,17 @@ def videos(subject):
         print address
         if len(address) < 45:
             youtube_dl.YoutubeDL({'format': 'mp4'}).download([address])
+
+#function for sending protest emails
+def emails(subject):
+    print "sending protest emails"
+
+#function for sending protest tweets
+def tweets(subject):
+    print "tweeting against stuff"
+
+#function for creating avatars, profile pics and banners for social media
+def social_media(subject):
+    print "creating avatars, profile pics and banners for facebook"
+    print "creating avatars, profile pics and banners for twitter"
+    print "creating avatars, profile pics and banners for instagram"
