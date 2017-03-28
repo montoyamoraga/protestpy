@@ -105,6 +105,33 @@ def images(subject):
         urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
         counter = counter + 1
 
+    #list of protest words
+    protestWords = ["oh no", "is disgusting", "sucks"]
+
+    prePath = "./pics_" + subject + "/"
+    pngExtension = ".png"
+
+    #pick font
+    #fnt = ImageFont.truetype('./assets/Comic_Sans_MS.ttf', 30)
+
+    print "put protest stuff on top"
+    # iterate through every pic in the folder
+    for counter in range(len(os.listdir(prePath)) - 1):
+        # build path to pic
+        path = prePath + str(counter)
+        print path
+        # open the image
+        img = Image.open(path + pngExtension)
+        # canvas element is an instace of ImageDraw
+        canvas = ImageDraw.Draw(img)
+        for i in range(times):
+            # fnt element is an instance of ImageFont
+            text = sonnets[random.randint(1, len(sonnets) - 1)]
+            canvas.text((random.randint(0, 300), random.randint(0, 500)), text, fill=(
+                random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)), font=fnt)
+        img.save(path + pngExtension)
+
+
     #print message
     print "close browser"
 
@@ -165,52 +192,3 @@ def videos(subject):
         print address
         if len(address) < 45:
             youtube_dl.YoutubeDL({'format': 'mp4'}).download([address])
-
-    # #click on the button
-    # buttons[0].click()
-    #
-    # #scroll up and down to make more images appear
-    # for i in range(10):
-    #     driver.execute_script(
-    #         "window.scrollTo(0, document.body.scrollHeight);")
-    #     time.sleep(0.1)
-    #     driver.execute_script("window.scrollTo(0, 0);")
-    #     time.sleep(0.1)
-    #
-    # #scroll down
-    # driver.execute_script(
-    #     "window.scrollTo(0, document.body.scrollHeight);")
-    #
-    # #print message
-    # print "create folders for storing pics"
-    #
-    # #create folder for storing pics
-    # picsFolder = "pics_" + subject
-    # system("mkdir " + picsFolder)
-    # system("cd " + picsFolder)
-    #
-    # #print message
-    # print "find all of the images"
-    #
-    # #find images
-    # images = driver.find_elements_by_tag_name("img")
-    #
-    # #reset counter
-    # counter = 0
-    #
-    # #print message
-    # print "download every image"
-    #
-    # # iterate through all of the images
-    # for image in images:
-    #     imageSrc = image.get_attribute('currentSrc')
-    #     print imageSrc
-    #     # save the images to the pics folder, as counter.png
-    #     urllib.urlretrieve(imageSrc, "./pics_" + subject + "/" + str(counter) + ".png")
-    #     counter = counter + 1
-    #
-    # #print message
-    # print "close browser"
-    #
-    # #close the browser
-    # driver.quit()
