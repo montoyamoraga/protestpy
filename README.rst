@@ -11,8 +11,16 @@ install with pip:
 
   pip install protest
 
+examples
+--------
+
+these are some examples of protest.py being used for protesting against trees.
+
 .. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/1.png
 
+.. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/8.png
+
+.. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/44.png
 
 special thanks
 --------------

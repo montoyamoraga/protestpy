@@ -1,12 +1,11 @@
 Metadata-Version: 1.0
 Name: protest
-Version: 0.5.10
+Version: 0.5.11
 Summary: automatic generation of protesting material
 Home-page: https://github.com/montoyamoraga/protestpy
 Author: aaron montoya-moraga
 Author-email: UNKNOWN
 License: MIT
-Description-Content-Type: UNKNOWN
 Description: protest.py
         ==========
         
@@ -19,6 +18,17 @@ Description: protest.py
         install with pip:
         
           pip install protest
+        
+        examples
+        --------
+        
+        these are some examples of protest.py being used for protesting against trees.
+        
+        .. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/1.png
+        
+        .. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/8.png
+        
+        .. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/44.png
         
         special thanks
         --------------

@@ -33,10 +33,10 @@ def images(subject):
     # url to be scraped
     base_url = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1044&bih=584&q="
 
-    #retrieve the argument from the function
+    # retrieve the argument from the function
     handle = subject
 
-    #reconstruct the complete url
+    # reconstruct the complete url
     complete_url = base_url + handle
 
     #print message
