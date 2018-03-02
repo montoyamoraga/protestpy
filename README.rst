@@ -1,7 +1,8 @@
 protest.py
 ==========
 
-python module written by aaron montoya-moraga, march 2017, part of "it's okay", his graduation thesis at nyu itp.
+python module by aarón montoya-moraga, first released on march 2017.
+it is a part of "its-ok", his graduate thesis at nyu itp.
 
 installation
 ------------
