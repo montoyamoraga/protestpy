@@ -11,6 +11,9 @@ install with pip:
 
   pip install protest
 
+.. image::  https://raw.githubusercontent.com/montoyamoraga/protestpy/gh-pages/example-trees/1.png
+
+
 special thanks
 --------------
 
