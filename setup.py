@@ -1,16 +1,16 @@
-#protest.py
-#by aaron montoya-moraga
-#march 2017
+# protest.py
+# by aaron montoya-moraga
+# march 2017
 
-#to distribute, on terminal do
-#python setup.py sdist
+# to distribute, on terminal do
+# python setup.py sdist
 
-#from distutils.core import setup
+# from distutils.core import setup
 from setuptools import *
 
 setup(
     name='protest',
-    version='0.4.1',
+    version='0.5.0',
     url='https://github.com/montoyamoraga/protestpy',
     author='aaron montoya-moraga',
     description='automatic generation of protesting material',

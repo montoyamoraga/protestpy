@@ -1,3 +1,9 @@
+# protest.py
+# by aaron montoya-moraga
+# v0.5.0
+# march 2018
+
+# dependencies
 import os
 from os import system
 import sys
@@ -12,7 +18,7 @@ import youtube_dl
 
 def images(subject):
 
-    #print message
+    # print message
     print "open new google chrome window"
 
     # new driver using google chrome
@@ -42,10 +48,10 @@ def images(subject):
     # wait for 2 seconds
     time.sleep(2)
 
-    #print message
+    # print message
     print "scrolling up and down to load a lot of pics"
 
-    #scroll up and down to make more images appear
+    # scroll up and down to make more images appear
     for i in range(10):
         driver.execute_script(
             "window.scrollTo(0, document.body.scrollHeight);")
@@ -65,7 +71,7 @@ def images(subject):
     #click on the button
     buttons[0].click()
 
-    #scroll up and down to make more images appear
+    # scroll up and down to make more images appear
     for i in range(10):
         driver.execute_script(
             "window.scrollTo(0, document.body.scrollHeight);")
@@ -73,28 +79,28 @@ def images(subject):
         driver.execute_script("window.scrollTo(0, 0);")
         time.sleep(0.1)
 
-    #scroll down
+    # scroll down
     driver.execute_script(
         "window.scrollTo(0, document.body.scrollHeight);")
 
-    #print message
+    # print message
     print "create folders for storing pics"
 
-    #create folder for storing pics
+    # create folder for storing pics
     picsFolder = "pics_" + subject
     system("mkdir " + picsFolder)
     system("cd " + picsFolder)
 
-    #print message
+    # print message
     print "find all of the images"
 
-    #find images
+    # find images
     images = driver.find_elements_by_tag_name("img")
 
-    #reset counter
+    # reset counter
     counter = 0
 
-    #print message
+    # print message
     print "download every image"
 
     # iterate through all of the images
@@ -110,7 +116,7 @@ def images(subject):
 
 
     #list of protest words
-    protestWords = ["oh no", "is disgusting", "sucks", "is bad", "could be better", "needs improvement", "stop this", "this is very bad", "disapproval", "ugh", "i'm pissed about this", "i'm sick of this", "i don't like this", "this is unfair", "nope"]
+    protestWords = ["oh no", "is disgusting", "sucks", "is bad", "could be better", "needs improvement", "stop this", "this is very bad", "disapproval", "ugh", "i'm pissed about this", "i'm sick sof this", "i don't like this", "this is unfair", "nope"]
 
     #define extensions
     prePath = "./pics_" + subject + "/"
@@ -125,8 +131,6 @@ def images(subject):
     #fnt = ImageFont.truetype('Pillow/Tests/fonts/FreeMono.ttf', 40)
     #fnt = ImageFont.truetype("arial.ttf", 15)
     fnt = ImageFont.load_default()
-
-
 
     print "put protest stuff on top"
     # iterate through every pic in the folder
