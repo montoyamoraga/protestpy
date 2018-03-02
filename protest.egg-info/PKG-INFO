@@ -1,10 +1,33 @@
 Metadata-Version: 1.0
 Name: protest
-Version: 0.5.0
+Version: 0.5.1
 Summary: automatic generation of protesting material
 Home-page: https://github.com/montoyamoraga/protestpy
 Author: aaron montoya-moraga
 Author-email: UNKNOWN
 License: MIT
-Description: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: protest.py
+        ==========
+        
+        python module by aarón montoya-moraga, first released on march 2017.
+        it is a part of "its-ok", his graduate thesis at nyu itp.
+        
+        installation
+        ------------
+        
+        install with pip:
+        
+          pip install protest
+        
+        special thanks
+        --------------
+        
+        allison parrish, andrew lazarow, justin peake, lauren mccarthy, sam lavigne, tigran paravyan, wipawe sirikolkarn, yuan gao, yuli cai, zoe bachman
+        
+        license
+        -------
+        
+        mit
+        
 Platform: UNKNOWN

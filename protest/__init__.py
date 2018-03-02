@@ -17,6 +17,7 @@ from selenium.webdriver.common.keys import Keys
 import youtube_dl
 
 def images(subject):
+    '''this function creates protesting material using images from google'''
 
     # print message
     print "open new google chrome window"
