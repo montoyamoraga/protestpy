@@ -22,7 +22,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='protest',
-    version='0.5.1',
+    version='0.5.10',
     url='https://github.com/montoyamoraga/protestpy',
     author='aaron montoya-moraga',
     description='automatic generation of protesting material',
