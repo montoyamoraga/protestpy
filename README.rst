@@ -2,7 +2,7 @@ protest.py
 ==========
 
 python module by aarón montoya-moraga, first released on march 2017.
-it is a part of "its-ok", his graduate thesis at nyu itp.
+it is a part of "its-ok", their graduate thesis at nyu itp.
 
 installation
 ------------
